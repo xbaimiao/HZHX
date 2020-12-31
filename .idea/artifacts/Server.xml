@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Server">
+    <output-path>$PROJECT_DIR$/out/artifacts/Server</output-path>
+    <root id="archive" name="Server.jar">
+      <element id="module-output" name="荒之幻想各种小插件(写一起懒得新建项目)" />
+      <element id="file-copy" path="$PROJECT_DIR$/config.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/plugin.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/npc.yml" />
+    </root>
+  </artifact>
+</component>

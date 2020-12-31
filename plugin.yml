@@ -1,0 +1,8 @@
+main: com.xbaimiao.server.Main
+name: Server
+author: xbaimiao
+version: 1.0
+api-version: 1.13
+softdepend:
+  - QuickShop
+  - Islands
