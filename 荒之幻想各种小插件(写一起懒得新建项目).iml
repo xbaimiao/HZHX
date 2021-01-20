@@ -60,7 +60,16 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Desktop/Citizens-2.0.27-b2203.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../Lib/OnlineAPI.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../Lib/ProtocolLib.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

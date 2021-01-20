@@ -1,7 +1,11 @@
 package com.xbaimiao.server
 
+import com.comphenix.protocol.PacketType
+import com.comphenix.protocol.ProtocolLibrary
 import com.xbaimiao.miao.utils.Utils.registerCommand
 import com.xbaimiao.miao.utils.Utils.registerListener
+import com.xbaimiao.server.etc.Etc
+import com.xbaimiao.server.etc.EventSign
 import com.xbaimiao.server.guide.NewPlayerLead
 import com.xbaimiao.server.islands.AddPlayer
 import com.xbaimiao.server.islands.IslandsListeners
@@ -24,11 +28,13 @@ class Main : JavaPlugin() {
 
     companion object {
         lateinit var main: Main
+        val manager = ProtocolLibrary.getProtocolManager()
     }
 
     override fun onEnable() {
         main = this
         saveResource("npc.yml", false)
+        Etc.registerCommand(this)
         EndGuard.registerListener(this)
         PlaySong.registerListener(this)
         Listeners().registerListener(this)
@@ -42,6 +48,7 @@ class Main : JavaPlugin() {
         LobbyGuard.registerCommand(this)
         NewPlayerLead().registerCommand(this)
         PlaySong.go()
+        manager.addPacketListener(EventSign(this, PacketType.Play.Client.UPDATE_SIGN))
     }
 
     override fun onDisable() {
